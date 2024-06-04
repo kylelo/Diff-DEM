@@ -16,7 +16,7 @@ Place Diff-DEM pretrained model at `Diff-DEM/pretrained/760_Network.pth`
 > The results of `generative_model`, `spline`, `void_fill` tested on Gavriil's dataset are sourced from [repo](https://github.com/konstantg/dem-fill).
 
 ## Training
-```python
+```console
 python run.py -p train -c config/dem_completion.json
 ```
 
@@ -27,7 +27,7 @@ tensorboard --logdir experiments/train_dem_completion_XXXXXX_XXXXXX
 
 ## Inference
 
-```python
+```console
 python run.py -p test -c config/dem_completion.json \
     --resume ./pretrained/760 \
     --n_timestep 512 \
@@ -40,7 +40,7 @@ python run.py -p test -c config/dem_completion.json \
 ## Metric
 Evaluate the predicted DEM.
 For example:
-```python
+```console
 python data/util/tif_metric.py \
     --gt_tif_dir ./dataset/norway_dem/benchmark/gt \
     --mask_dir ./dataset/norway_dem/benchmark/mask/128-160 \

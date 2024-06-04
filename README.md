@@ -21,7 +21,7 @@ python run.py -p train -c config/dem_completion.json
 ```
 
 See training progress
-```
+```console
 tensorboard --logdir experiments/train_dem_completion_XXXXXX_XXXXXX
 ```
 
